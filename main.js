@@ -28,7 +28,9 @@ function sendContact(choices) {
           phoneNumber: choices[3]
       }),
       contentType: 'application/json',
-      success: completeRequest,
+      success: function ajaxSuccess() {
+        console.log('Successfully sent');
+      },
       error: function ajaxError(jqXHR, textStatus, errorThrown) {
           console.error('Error sending contact info: ', textStatus, ', Details: ', errorThrown);
           console.error('Response: ', jqXHR.responseText);
