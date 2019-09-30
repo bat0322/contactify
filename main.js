@@ -19,7 +19,7 @@ $(document).ready(function(){
 function sendContact(choices) {
   $.ajax({
       method: 'POST',
-      url: _config.api.invokeUrl + '/contact',
+      url:  'https://nvhn5rzo52.execute-api.us-east-1.amazonaws.com/prod/contact',
       headers: {},
       data: JSON.stringify({
           firstName: choices[0],
