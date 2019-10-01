@@ -48,7 +48,7 @@ function sendContact(choices) {
       data: JSON.stringify({
           firstName: choices[0],
           lastName: choices[1],
-          email: choices[2],
+          Email: choices[2],
           phoneNumber: choices[3]
       }),
       contentType: 'application/json',
