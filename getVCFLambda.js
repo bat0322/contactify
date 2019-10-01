@@ -32,7 +32,8 @@ exports.handler = (event, context, callback) => {
             vcftext += 'FN:' + item.FirstName + ' ' + item.LastName + '\n';
             vcftext += 'N:' + item.LastName + ';' + item.FirstName + ';;;\n';
             vcftext += 'item1.TEL:' + item.PhoneNumber + '\n';
-            vcftext += 'item1.X-ABLabel:\nEND:VCARD\n'
+            vcftext += 'EMAIL;type=INTERNET;type=pref:' + item.Email + '\n';
+            vcftext += 'END:VCARD\n';
         })
         
         // let vcardtxt = 'BEGIN:VCARD\nVERSION:3.0\nFN:Alex Quipp\nN:Quipp;Alex;;;\nitem1.TEL:914-574-7664\nitem1.X-ABLabel:\nEND:VCARD\n'
