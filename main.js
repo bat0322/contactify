@@ -25,7 +25,7 @@ function sendVCF(email) {
       url:  'https://nvhn5rzo52.execute-api.us-east-1.amazonaws.com/prod/vcf',
       headers: {},
       data: JSON.stringify({
-          email: email
+          Email: email
       }),
       contentType: 'application/json',
       success: function ajaxSuccess() {
@@ -48,7 +48,7 @@ function sendContact(choices) {
       data: JSON.stringify({
           firstName: choices[0],
           lastName: choices[1],
-          Email: choices[2],
+          email: choices[2],
           phoneNumber: choices[3]
       }),
       contentType: 'application/json',
